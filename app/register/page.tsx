@@ -27,7 +27,7 @@ const Register = () => {
         }
 
         try {
-      const res = await fetch("/api/register", {
+      const res = await fetch("https://setorsampah.vercel.app/api/register", {
         method: "POST",
                 headers: {
                     "Content-Type": "application/json",
