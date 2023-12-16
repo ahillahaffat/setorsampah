@@ -1,6 +1,13 @@
 import React from "react";
-
-const TeamMember = ({
+interface TeamMemberProps {
+  name: string;
+  role: string;
+  imageSrc: string;
+  githubLink: string;
+  instagramLink: string;
+  linkedinLink: string; // Add any other props and their types as needed
+}
+const TeamMember: React.FC<TeamMemberProps> = ({
   name,
   role,
   imageSrc,
@@ -382,7 +389,7 @@ const Team = () => {
         </div>
       </div>
       
-      <div class="-mx-4 flex flex-wrap justify-center">
+      <div className="-mx-4 flex flex-wrap justify-center">
           {teamMembers.map((member, index) => (
             <TeamMember
               key={index}

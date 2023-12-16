@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "types": ["node", "bcryptjs"],
     "lib": [
       "dom",
       "dom.iterable",
@@ -33,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/Navbar.tsx", "app/setorsampah/page.tsx", "app/layanan/page.tsx"  ],
+, "components/Navbar.tsx", "app/setorsampah/page.tsx", "app/layanan/page.tsx", "components/layanan/features-layanan.tsx", "components/layanan/setorsampahform.jsx"  ],
   "exclude": [
     "node_modules"
   ]

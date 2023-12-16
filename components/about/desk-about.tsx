@@ -6,11 +6,12 @@ const DescAbout = () => {
     <div className="max-w-6xl mx-auto p-8 py-10 lg:py-20" data-aos="fade-right">
       <div className="flex flex-col lg:flex-row lg:min-h-[500px]">
       <div className="w-full lg:w-1/3 relative mb-6 lg:mb-0 md:flex md:items-center md:justify-center">
-  <Image
-    src="/Recycle-01.png"
-    width={500}
-    height={44}
-  />
+      <Image
+  src="/Recycle-01.png"
+  alt="Description of the image"
+  width={500}
+  height={44}
+/>
 </div>
         <div className="w-full lg:w-2/3 flex flex-col py-6">
           <h1 className="text-black regular-24 md:regular-32 2xl:regular-48 mb-3 lg:mb-4">

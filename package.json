@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve@latest out",
-    "lint": "next lint"
+    "start": "npx serve@latest out"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -37,6 +36,7 @@
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.6",
+    "@types/aos": "^3.0.7",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18.2.43",

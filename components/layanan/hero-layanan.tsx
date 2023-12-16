@@ -1,21 +1,8 @@
 "use client"
-import React, { useState } from "react";
-import HeroImage from "../../public/hero-image.png";
-import Modal from "../utils/Modal";
+import React from "react";
 import Link from "next/link";
 
 function HeroLayanan() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = (e) => {
-    e.stopPropagation();
-    setIsModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <section className="relative">
       {/* Illustration behind hero content */}

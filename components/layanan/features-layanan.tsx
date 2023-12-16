@@ -2,23 +2,25 @@
 import React, { useState, useRef, useEffect } from "react";
 import Transition from "../utils/Transition";
 import Langkah from "../../public/langkah-01.png";
-import FeaturesElement from "../../public/features-element.png";
 
 function Features() {
   const [tab, setTab] = useState(1);
   const [selectedCard, setSelectedCard] = useState(0);
   const tabs = useRef(null);
 
-  const heightFix = () => {
-    if (tabs.current.children[tab]) {
-      tabs.current.style.height =
-        tabs.current.children[tab - 1].offsetHeight + "px";
-    }
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, [tab]);
+  // const heightFix = () => {
+  //   if (
+  //     tabs.current &&
+  //     'children' in tabs.current &&
+  //     (tabs.current as { children: HTMLElement[] }).children[tab - 1]
+  //   ) {
+  //     tabs.current.style.height =
+  //       (tabs.current as { children: HTMLElement[] }).children[tab - 1].offsetHeight + 'px';
+  //   }
+  // };
+  // useEffect(() => {
+  //   heightFix();
+  // }, [tab]);
 
   useEffect(() => {
     setSelectedCard(0);
@@ -92,7 +94,7 @@ function Features() {
       return (
         <div key={stepIndex}>
           <div className="flex mb-1">
-            <div className="font-bold mr-2">{stepIndex + 1}. </div>
+            <div className="font-bold mr-2">{stepIndex + 1}</div>
             {stepContent}
           </div>
         </div>
@@ -107,7 +109,7 @@ function Features() {
         className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
         aria-hidden="true"
       ></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-32 md:h-32 sm:h-20 bg-gradient-to-b from-green-800 via-green-50 to-green-201 transform -translate-y-3/4 xs:transform -translate-y-2/4"></div>
+      <div className="absolute left-0 right-0 m-auto w-px p-px h-32 md:h-32 sm:h-20 bg-gradient-to-b from-green-800 via-green-50 to-green-201 transform -translate-y-3/4 xs:transform"></div>
 
       <div className="relative max-w-6xl mx-auto">
         <div className="pt-12 md:pt-20">

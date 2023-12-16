@@ -33,7 +33,7 @@ const Hero1 = () => {
   }, []);
 
   const textAnimationClass = isInitialLoad ? styles.fadeInText : "";
-  const isAboutPage = router.pathname === '/about'; // Check if the current page is the "about" page
+  const isAboutPage = (router as any).pathname === '/about';
 
   return (
     <section className="relative h-screen overflow-hidden">

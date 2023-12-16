@@ -1,6 +1,12 @@
 import React from 'react';
 
-const FaqItem = ({ step, title, description }) => {
+interface FaqItemProps {
+  step: string;
+  title: string;
+  description: string;
+}
+
+const FaqItem: React.FC<FaqItemProps> = ({ step, title, description }) => {
   return (
     <div className="mb-12 lg:mb-[70px] flex">
   <div className="bg-green-50 mr-4 flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center">

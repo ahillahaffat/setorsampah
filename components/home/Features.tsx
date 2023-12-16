@@ -73,7 +73,7 @@ const Features = () => {
               whileHover={{ scale: 1.1 }}
               data-aos="fade-up"
             >
-              Semua Tentang Kami disini ->
+              Semua Tentang Kami disini
             </motion.button>
           </motion.div>
 

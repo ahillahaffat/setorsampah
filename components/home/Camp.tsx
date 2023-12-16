@@ -5,12 +5,9 @@ import Image from "next/image";
 
 interface CampProps {
   backgroundImage: string;
-  title: string;
-  subtitle: string;
-  centerText: string;
 }
 
-const CampSite = ({ backgroundImage, title, subtitle, centerText }: CampProps) => {
+const CampSite = ({ backgroundImage }: CampProps) => {
   return (
     <motion.div
   className={`h-full w-full min-w-[320px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] 2xl:min-w-[1440px] ${backgroundImage} bg-cover bg-no-repeat 
@@ -23,10 +20,6 @@ const CampSite = ({ backgroundImage, title, subtitle, centerText }: CampProps) =
 >
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
         <div className="flexCenter gap-4">
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-white text-2xl lg:text-4xl">{title}</h4>
-            <p className="text-regular text-white">{subtitle}</p>
-          </div>
         </div>
         <div className="absolute inset-0 flex items-center justify-center text-white">
           <h2 className="text-2xl md:text-4xl 2xl:text-6xl capitalize text-white text-left lg:-mt-20 lg:-ml-80">

@@ -7,81 +7,62 @@ import Image from "next/image";
 
 const Register = () => {
   const [error, setError] = useState("");
-  const [passwordsMatch, setPasswordsMatch] = useState(true);
-  const router = useRouter();
-  const { data: session, status: sessionStatus } = useSession();
+    const router = useRouter();
+    const { data: session, status: sessionStatus } = useSession();
 
-  useEffect(() => {
-    if (sessionStatus === "authenticated") {
-      router.replace("/");
-    }
-  }, [sessionStatus, router]);
+    useEffect(() => {
+        if (sessionStatus === "authenticated") {
+            router.replace("/dashboard");
+        }
+    }, [sessionStatus, router]);
 
-  const isValidEmail = (email) => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailRegex.test(email);
-  };
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+        const email = e.target[0].value;
+        const password = e.target[1].value;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+        if (!password || password.length < 3) {
+            setError("Password is invalid");
+            return;
+        }
 
-    // Extract form values
-    const name = e.target[0].value;
-    const email = e.target[1].value;
-    const password = e.target[2].value;
-    const confirmPassword = e.target[3].value;
-
-    if (!name || !email || !password || !confirmPassword) {
-      setError("All fields are required");
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      setError("Email is invalid");
-      return;
-    }
-
-    if (password.length < 8) {
-      setError("Password must be at least 8 characters");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      setPasswordsMatch(false);
-      return;
-    }
-
-    try {
+        try {
       const res = await fetch("/api/register", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-          confirmPassword,
-        }),
-      });
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            });
+            if (res.status === 400) {
+                setError("This email is already registered");
+            }
+            if (res.status === 200) {
+                setError("");
+                router.push("/login");
+            }
+        } catch (error) {
+            setError("Error, try again");
+            console.log(error);
+        }
+    };
 
-      if (res.status === 400) {
-        const data = await res.json();
-        setError(data.error);
-      } else if (res.status === 200) {
-        setError("");
-        setPasswordsMatch(true);
-        router.push("/login");
-      }
-    } catch (error) {
-      setError("Error, try again");
-      console.log(error);
-    }
-  };
-
-  if (sessionStatus === "loading") {
-    return <h1>Loading...</h1>;
+    if (sessionStatus === "loading") {
+      return (
+          <div className="flex justify-center items-center h-screen bg-black">
+              <div className="p-8 rounded-lg">
+                  <svg className="pl" width="240" height="240" viewBox="0 0 240 240">
+                      <circle className="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" strokeWidth="20" strokeDasharray="0 660" strokeDashoffset="-330" strokeLinecap="round"></circle>
+                      <circle className="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" strokeWidth="20" strokeDasharray="0 220" strokeDashoffset="-110" strokeLinecap="round"></circle>
+                      <circle className="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" strokeWidth="20" strokeDasharray="0 440" strokeLinecap="round"></circle>
+                      <circle className="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" strokeWidth="20" strokeDasharray="0 440" strokeLinecap="round"></circle>
+                  </svg>
+              </div>
+          </div>
+      );
   }
   return (
     sessionStatus !== "authenticated" && (
@@ -139,7 +120,6 @@ const Register = () => {
                   required
                 />
                 <p className="text-red-400 text-[16px] mb-4">
-            {(error && error) || (!passwordsMatch && "Passwords do not match")}
           </p>
                 <button type="reset" className="w-max p-3 -mr-3">
                   <span className="text-sm tracking-wide text-gray-800">
