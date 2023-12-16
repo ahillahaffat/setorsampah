@@ -7,48 +7,78 @@ import Image from "next/image";
 
 const Register = () => {
   const [error, setError] = useState("");
-    const router = useRouter();
-    const { data: session, status: sessionStatus } = useSession();
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
+  const router = useRouter();
+  const { data: session, status: sessionStatus } = useSession();
 
-    useEffect(() => {
-        if (sessionStatus === "authenticated") {
-            router.replace("/dashboard");
-        }
-    }, [sessionStatus, router]);
+  useEffect(() => {
+    if (sessionStatus === "authenticated") {
+      router.replace("/");
+    }
+  }, [sessionStatus, router]);
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
-        const email = e.target[0].value;
-        const password = e.target[1].value;
+  const isValidEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+  };
 
-        if (!password || password.length < 3) {
-            setError("Password is invalid");
-            return;
-        }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        try {
+    // Extract form values
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    const confirmPassword = e.target[3].value;
+
+    if (!name || !email || !password || !confirmPassword) {
+      setError("All fields are required");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setError("Email is invalid");
+      return;
+    }
+
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      setPasswordsMatch(false);
+      return;
+    }
+
+    try {
       const res = await fetch("https://setorsampah.vercel.app/api/register", {
         method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    email,
-                    password,
-                }),
-            });
-            if (res.status === 400) {
-                setError("This email is already registered");
-            }
-            if (res.status === 200) {
-                setError("");
-                router.push("/login");
-            }
-        } catch (error) {
-            setError("Error, try again");
-            console.log(error);
-        }
-    };
+          name,
+          email,
+          password,
+          confirmPassword,
+        }),
+      });
+
+      if (res.status === 400) {
+        const data = await res.json();
+        setError(data.error);
+      } else if (res.status === 200) {
+        setError("");
+        setPasswordsMatch(true);
+        router.push("/login");
+      }
+    } catch (error) {
+      setError("Error, try again");
+      console.log(error);
+    }
+  };
 
     if (sessionStatus === "loading") {
       return (
