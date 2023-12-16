@@ -1,0 +1,22 @@
+
+/* HeroLayanan.module.css */
+.fadeInText {
+    opacity: 0;
+    transform: translateY(-20px); /* Initial position for the text */
+    animation: fadeInTextAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInTextAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .parallax {
+    transition: transform 0.5s ease-out; /* Adjust the duration and easing function as needed */
+  }
