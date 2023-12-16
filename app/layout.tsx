@@ -23,7 +23,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {children}
           </div>
         </SessionProvider>
-        <Footer/>
       </body>
     </html>
   );

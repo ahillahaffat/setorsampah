@@ -7,6 +7,7 @@ import DescAbout from "@/components/about/desk-about";
 import SolutionAbout from "@/components/about/solution-about";
 
 import Team from "@/components/about/team-about";
+import Footer from "@/components/Footer";
 
 const About = async () => {
   const session = await getServerSession();
@@ -19,6 +20,7 @@ const About = async () => {
     <Hero1 />
     <DescAbout />
     <SolutionAbout />
+    <Footer/>
     </div>
   );
 };

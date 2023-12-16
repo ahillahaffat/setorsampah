@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer'
-import SetorSampahForm from '@/components/layanan/setorsampahform';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SetorSampahForm from "@/components/layanan/setorsampahform";
 
 const SetorSampah = () => (
   <div>
     <Navbar />
-    <SetorSampahForm/>
+    <SetorSampahForm />
+    <Footer />
   </div>
 );
 

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Camp from "@/components/home/Camp";
 import Features from "@/components/home/Features";
@@ -10,6 +11,7 @@ export default function Home() {
       <Camp />
       <Features />
       <TrashHome/>
+      <Footer/>
     </main>
   )
 }

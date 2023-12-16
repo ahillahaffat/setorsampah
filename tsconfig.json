@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/Navbar.tsx", "app/setorsampah/page.tsx", "app/layanan/page.tsx", "components/layanan/features-layanan.tsx", "components/layanan/setorsampahform.jsx"  ],
+, "components/Navbar.tsx", "app/setorsampah/page.tsx", "app/layanan/page.tsx", "components/layanan/features-layanan.tsx", "components/layanan/setorsampahform.tsx"  ],
   "exclude": [
     "node_modules"
   ]

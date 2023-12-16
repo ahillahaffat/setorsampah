@@ -8,19 +8,15 @@ function Features() {
   const [selectedCard, setSelectedCard] = useState(0);
   const tabs = useRef(null);
 
-  // const heightFix = () => {
-  //   if (
-  //     tabs.current &&
-  //     'children' in tabs.current &&
-  //     (tabs.current as { children: HTMLElement[] }).children[tab - 1]
-  //   ) {
-  //     tabs.current.style.height =
-  //       (tabs.current as { children: HTMLElement[] }).children[tab - 1].offsetHeight + 'px';
-  //   }
-  // };
-  // useEffect(() => {
-  //   heightFix();
-  // }, [tab]);
+  const heightFix = () => {
+    if (tabs.current.children[tab]) {
+      tabs.current.style.height =
+        tabs.current.children[tab - 1].offsetHeight + "px";
+    }
+  };
+  useEffect(() => {
+    heightFix();
+  }, [tab]);
 
   useEffect(() => {
     setSelectedCard(0);

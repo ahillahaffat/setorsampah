@@ -46,9 +46,7 @@ const SetorSampahForm = () => {
     const poinKertas = Math.max(0, weightKertas / 0.1) * poinPerKgKertas;
     const poinPlastik = Math.max(0, weightPlastik / 0.1) * poinPerKgPlastik;
     const poinKaleng = Math.max(0, weightKaleng / 0.1) * poinPerKgKaleng;
-
     const totalPoin = poinKertas + poinPlastik + poinKaleng;
-
     console.log("Total Poin:", totalPoin);
 
     return totalPoin;
@@ -68,7 +66,6 @@ const SetorSampahForm = () => {
     console.log("Data Setor Sampah:", setorSampah);
 
     const totalPoin = calculatePoints();
-    
 
     const formData = new FormData();
     for (const key in setorSampah) {
@@ -90,14 +87,17 @@ const SetorSampahForm = () => {
     };
 
     try {
-      const response = await fetch("/api/datauser", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://setorsampah.vercel.app/api/datauser",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.status === 200 || response.status === 201) {
         router.push("/");
-    }
+      }
     } catch (error) {
       console.error(error);
     }
