@@ -164,7 +164,7 @@ const SetorSampahForm = () => {
                 name="name"
                 id="name"
                 required
-                className="ml-3 cursor-not-allowed bg-gray-200 w-full rounded-md border-0 py-1.5 text-gray-700 focus:ring-gray-200 sm:text-sm sm:leading-6"
+                className="pl-3 cursor-not-allowed bg-gray-200 w-full rounded-md border-0 py-1.5 text-gray-700 focus:ring-gray-200 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -183,7 +183,7 @@ const SetorSampahForm = () => {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="ml-3 cursor-not-allowed bg-gray-200 block w-full rounded-md border-0 py-1.5 text-gray-700 sm:text-sm focus:ring-gray-200 sm:leading-6"
+                className="pl-3 cursor-not-allowed bg-gray-200 block w-full rounded-md border-0 py-1.5 text-gray-700 sm:text-sm focus:ring-gray-200 sm:leading-6"
               />
             </div>
           </div>
@@ -206,7 +206,7 @@ const SetorSampahForm = () => {
                   })
                 }
                 autoComplete="lokasi-gunung"
-                className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+                className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -228,7 +228,7 @@ const SetorSampahForm = () => {
                     tanggalNaik: e.target.value,
                   })
                 }
-                className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+                className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -250,7 +250,7 @@ const SetorSampahForm = () => {
                     tanggalTurun: e.target.value,
                   })
                 }
-                className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+                className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -275,7 +275,7 @@ const SetorSampahForm = () => {
               setSetorSampah({ ...setorSampah, kertas: e.target.value })
             }
             autoComplete="kertas"
-            className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+            className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
         </div>
       </div>
@@ -294,7 +294,7 @@ const SetorSampahForm = () => {
               setSetorSampah({ ...setorSampah, plastik: e.target.value })
             }
             autoComplete="plastik"
-            className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+            className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
         </div>
       </div>
@@ -313,7 +313,7 @@ const SetorSampahForm = () => {
               setSetorSampah({ ...setorSampah, kaleng: e.target.value })
             }
             autoComplete="kaleng"
-            className="ml-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
+            className="pl-3 block w-full rounded-md border-0 py-1.5 bg-gray-50 text-gray-90 shadow-sm ring-1 ring-inset ring-gray-50 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-20 sm:text-sm sm:leading-6"
               />
         </div>
       </div>
