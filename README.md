@@ -59,7 +59,7 @@ Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
 ### Home
 ![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/home.jpg)
 ### About
-![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/about.jpg)
+![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/about-fix.jpg)
 ### Layanan
 ![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/layanan.jpg)
 ### Contact
