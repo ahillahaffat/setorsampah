@@ -1,4 +1,4 @@
-# capstone-project-C523-PS031
+# Capstone-project-C523-PS031
 Repository ini berisi Capstone Project dari kelompok C523-PS031, project yang dibuat merupakan Aplikasi “Setor Sampah” : Untuk Terwujudnya Ekosistem   Taman Nasional Bebas Plastik.
 ## Daftar anggota kelompok :
 1. F159YB238 – Ayub Budi Santoso
