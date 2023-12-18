@@ -55,3 +55,12 @@ Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
    - Password :
      1234567890
 ```
+
+### Home
+![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/home.jpg)
+### About
+![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/about.jpg)
+### Layanan
+![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/layanan.jpg)
+### Contact
+![Haii](https://github.com/kaamibb/setorsampah/blob/main/public/kontak.jpg)
