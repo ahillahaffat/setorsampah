@@ -11,34 +11,33 @@ Repository ini berisi Capstone Project dari kelompok C523-PS031, project yang di
    Pastikan Node.js sudah terinstal di komputermu sebelum memulai.
 
 1. *Clone Repository:*
-
-    bash
+```
     git clone https://github.com/kaamibb/setorsampah.git
     cd nama-proyek
-    
+```
 
 2. *Install Dependencies:*
 
     Gunakan perintah berikut untuk menginstal paket yang diperlukan.
 
-    bash
+```
     npm install
-
+```
 Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
 
-1. *Jalankan dalam Mode Pengembangan:*
+   1. *Jalankan dalam Mode Pengembangan:*
 
-    bash
+```
     npm run dev
-    
+```
 
-    Proyek akan berjalan dalam mode pengembangan. Buka browser dan akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
+   Proyek akan berjalan dalam mode pengembangan. Buka browser dan akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
-2. *Build untuk Produksi:*
+   2. *Build untuk Produksi:*
 
-    bash
+```
     npm run build
-    
+```
 
     Ini akan membangun proyek untuk produksi.
 
@@ -47,11 +46,12 @@ Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
    Website : [Click Here](https://setorsampah.vercel.app/) <br>
    Admin : [Click Here](https://setorsampah.vercel.app/login)
 
-### Informasi Akun Admin:
-
-- Email :
-  admin@gmail.com
-  
-- Password :
-  1234567890
-
+   ### Informasi Akun Admin:
+   ```
+   - Email :
+     admin@gmail.com
+```
+```
+   - Password :
+     1234567890
+```
