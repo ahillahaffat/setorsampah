@@ -64,8 +64,6 @@ const SetorSampahForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-<<<<<<< HEAD
     if (
       setorSampah.lokasigunung.trim() === "" ||
       setorSampah.buktiSampah === null ||
@@ -80,8 +78,6 @@ const SetorSampahForm = () => {
 
       return;
     }
-=======
->>>>>>> 2e787b44015b7f12bbdc13385556e03e7f333657
     const totalPoin = calculatePoints();
 
     const formData = new FormData();
