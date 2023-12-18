@@ -50,7 +50,6 @@ const SetorSampahForm = () => {
     const poinPlastik = Math.max(0, weightPlastik / 0.1) * poinPerKgPlastik;
     const poinKaleng = Math.max(0, weightKaleng / 0.1) * poinPerKgKaleng;
     const totalPoin = poinKertas + poinPlastik + poinKaleng;
-    console.log("Total Poin:", totalPoin);
 
     return totalPoin;
   };
@@ -66,6 +65,7 @@ const SetorSampahForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     if (
       setorSampah.lokasigunung.trim() === "" ||
       setorSampah.buktiSampah === null ||
@@ -80,6 +80,8 @@ const SetorSampahForm = () => {
 
       return;
     }
+=======
+>>>>>>> 2e787b44015b7f12bbdc13385556e03e7f333657
     const totalPoin = calculatePoints();
 
     const formData = new FormData();

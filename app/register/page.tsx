@@ -7,12 +7,19 @@ import Image from "next/image";
 
 const Register = () => {
   const [error, setError] = useState("");
+<<<<<<< HEAD
   const [emailError, setEmailError] = useState("");
+=======
+>>>>>>> 2e787b44015b7f12bbdc13385556e03e7f333657
   const [passwordsMatch, setPasswordsMatch] = useState(true);
   const router = useRouter();
   const { data: session, status: sessionStatus } = useSession();
 
+<<<<<<< HEAD
  useEffect(() => {
+=======
+  useEffect(() => {
+>>>>>>> 2e787b44015b7f12bbdc13385556e03e7f333657
     if (sessionStatus === "authenticated") {
       router.replace("/");
     }
@@ -38,10 +45,15 @@ const Register = () => {
     }
 
     if (!isValidEmail(email)) {
+<<<<<<< HEAD
       setEmailError("Email is invalid");
       return;
     } else {
       setEmailError(""); // Clear email error if email is valid
+=======
+      setError("Email is invalid");
+      return;
+>>>>>>> 2e787b44015b7f12bbdc13385556e03e7f333657
     }
 
     if (password.length < 8) {
