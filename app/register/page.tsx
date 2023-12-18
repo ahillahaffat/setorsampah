@@ -13,7 +13,6 @@ const Register = () => {
   const { data: session, status: sessionStatus } = useSession();
 
  useEffect(() => {
-  useEffect(() => {
     if (sessionStatus === "authenticated") {
       router.replace("/");
     }
@@ -27,7 +26,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Extract form values
     const name = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
@@ -43,8 +41,6 @@ const Register = () => {
       return;
     } else {
       setEmailError("");
-      setError("Email is invalid");
-      return;
     }
 
     if (password.length < 8) {
@@ -59,7 +55,7 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch("https://setorsampah.vercel.app/api/register", {
+      const res = await fetch("/api/register", {
         method: "POST",
                 headers: {
                     "Content-Type": "application/json",
