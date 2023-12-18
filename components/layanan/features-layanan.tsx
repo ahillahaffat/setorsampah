@@ -144,7 +144,7 @@ function Features() {
                       }}
                     >
                       <div
-                        className={`flex items-center justify-center w-10 h-10 rounded-full xs:w-8 xs:h-8 ${
+                        className={`flex items-center justify-center w-10 h-10 rounded-full md:w-10 md:h-10 xs:w-8 xs:h-8 ${
                           selectedCard === index
                             ? "bg-white text-green-50"
                             : "bg-green-50 text-gray-100"
@@ -153,7 +153,7 @@ function Features() {
                         <strong className="text-sm xs:text-sm" >{index + 1}</strong>
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-sm md:text-xl leading-snug tracking-tight mb-1 mt-2">
+                        <div className="font-semibold text-sm md:text-lg leading-snug tracking-tight mb-1 mt-2">
                           {selectedCard === index ? (
                             <span className="text-gray-100">{item.title}</span>
                           ) : (
@@ -161,7 +161,7 @@ function Features() {
                           )}
                         </div>
                         {selectedCard === index && (
-                          <div className="bg-transparent border-transparent rounded text-sm md:text-xl">
+                          <div className="bg-transparent border-transparent rounded text-sm md:text-lg">
                             {item.steps.map((step, stepIndex) => (
                               <div key={stepIndex} className="mb-3">
                                 {selectedCard === index ? (

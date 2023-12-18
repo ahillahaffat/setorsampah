@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/flowbite/**/*.js',
   ],
   theme: {
     extend: {
@@ -21,14 +20,18 @@ module.exports = {
           400: '#66BB6A',
           200: '#193820',
           201: '#2c4d33',
+          300: '#90e5ac',
         },
         gray: {
           10: '#EEEEEE',
-          20: '#A2A2A2',
+          20: '#a2aab8',
           30: '#7B7B7B',
-          50: '#585858',
-          90: '#141414',
+          50: '#f6f7f8',
+          90: '#4d4f5b',
+          200:'#dadde3',
+          700:'#6e7287',
           120: '#667380',
+          300:'#c1c7cf',
         },
         orange: {
           50: '#FF814C',
@@ -41,6 +44,7 @@ module.exports = {
         },
         yellow: {
           50: '#FEC601',
+          200:'#F9FAFB',
         },
       },
       backgroundColor: {
@@ -69,6 +73,5 @@ module.exports = {
     },
   },
   plugins: [
-    require('flowbite/plugin')
 ],
 };

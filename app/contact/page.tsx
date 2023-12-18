@@ -1,18 +1,14 @@
 import React from "react";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import Navbar from "@/components/Navbar";
-import Team from "@/components/about/team-about";
+import Team from "@/components/contact/team-about";
+import Footer from "@/components/Footer";
 
-const Contact = async () => {
-  const session = await getServerSession();
-  if (!session) {
-    redirect("/");
-  }
+const Contact = () => {
   return (
     <div>
       <Navbar/>
       <Team/>
+      <Footer/>
     </div>
   );
 };

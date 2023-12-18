@@ -1,16 +1,10 @@
 import React from "react";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import Features from "@/components/layanan/features-layanan";
 import Navbar from "@/components/Navbar";
 import HeroLayanan from "@/components/layanan/hero-layanan";
 import Footer from "@/components/Footer";
 
-const Layanan = async () => {
-  const session = await getServerSession();
-  if (!session) {
-    redirect("/login");
-  }
+const Layanan = () => {
   return (
     <div>
       <Navbar />

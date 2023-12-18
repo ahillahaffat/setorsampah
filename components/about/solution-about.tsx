@@ -77,7 +77,7 @@ const SolutionAbout = () => {
   ];
 
   return (
-    <section className="relative z-20 overflow-hidden bg-white p-8 pb-8 lg:pt-0 lg:pb-[50px]">
+    <section className="relative z-20 overflow-hidden bg-white p-8 pb-8 lg:pt-0 lg:pb-[50px]" data-aos="fade-up">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
@@ -85,9 +85,9 @@ const SolutionAbout = () => {
               <h2 className="text-black mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]">
                 <strong>Kami Hadir</strong>
               </h2>
-              <p className="mx-auto max-w-[485px] text-base font-semibold text-body-color dark:text-dark-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-800 via-green-50 to-green-201 py-3 mx-auto max-w-[485px] font-semibold text-xl">
                 Untuk Semua Orang
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -103,9 +103,9 @@ const SolutionAbout = () => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center">
-              <p className="mx-auto max-w-[485px] text-base font-semibold text-body-color dark:text-dark-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-800 via-green-50 to-green-201 py-3 mx-auto max-w-[485px] font-semibold text-xl">
                 Untuk Pihak Pengelola
-              </p>
+              </span>
             </div>
           </div>
         </div>

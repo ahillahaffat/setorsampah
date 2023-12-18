@@ -8,9 +8,7 @@ function HeroLayanan() {
       {/* Illustration behind hero content */}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Hero content */}
         <div className="pt-16 pb-8 md:pt-40 md:pb-20">
-          {/* Section header */}
           <div className="text-center pb-8 md:pb-16">
             <h1
               className="regular-32 md:regular-40 2xl:regular-72 mb-4"
@@ -49,17 +47,8 @@ function HeroLayanan() {
               </div>
             </div>
           </div>
-
-          {/* Hero image */}
         </div>
       </div>
-      {/* Render the modal
-      <Modal
-        id="modal"
-        ariaLabel="Form Setor Sampah"
-        show={isModalOpen}
-        handleClose={handleModalClose}
-      /> */}
     </section>
   );
 }
