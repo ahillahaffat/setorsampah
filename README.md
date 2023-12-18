@@ -50,15 +50,8 @@ Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
 ### Informasi Akun Admin:
 
 - Email :
-  bash
   admin@gmail.com
   
 - Password :
-  bash
   1234567890
 
-  ## WEBSITE VIEW
-
-### Beranda
-
-</div>
