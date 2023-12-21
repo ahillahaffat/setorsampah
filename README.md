@@ -44,7 +44,7 @@ Setelah instalasi selesai, kamu bisa menjalankan proyek dengan langkah berikut:
     ## DEMO 
  
    Website : [Click Here](https://setorsampah.vercel.app/) <br>
-   Admin : [Click Here]([https://adminsetorsampah.vercel.app/login])
+   Admin : [Click Here]([https://adminsetorsampah.vercel.app/login)
 
    ### Informasi Akun Admin:
    ```
