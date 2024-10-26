@@ -153,11 +153,6 @@ const Register = () => {
                 />
                 <p className="text-red-400 text-[16px] mb-4">{error && <span>{error}</span>}
           </p>
-                <button type="reset" className="w-max p-3 -mr-3">
-                  <span className="text-sm tracking-wide text-gray-800">
-                    Forgot password?
-                  </span>
-                </button>
               </div>
 
               <div>
